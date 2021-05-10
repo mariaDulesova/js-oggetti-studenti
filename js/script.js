@@ -69,14 +69,35 @@ console.log(nomeCognome);
 
 // Dare la possibilità all'utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell'ordine: nome, cognome e età.
 
-var utenteStudente = {
-    nome: prompt("Aggiungi il nome dello studente:"),
-    cognome: prompt("Aggiungi il cognome dello studente:"),
-    eta: parseInt(prompt("Aggiungi l'eta' dello studente:"))
-}
+//VERSIONE 1
+// var utenteStudente = {
+//     nome: prompt("Aggiungi il nome dello studente:"),
+//     cognome: prompt("Aggiungi il cognome dello studente:"),
+//     eta: parseInt(prompt("Aggiungi l'eta' dello studente:"))
+// }
 
+// classe.push(utenteStudente);
+// console.log(classe);
+
+//VERSIONE 2: CON CONTROLLI SU TIPO DI DATO INSERITO
+do {
+    var utenteStudenteNome = prompt("Aggiungi il nome dello studente:");
+} while (!isNaN(utenteStudenteNome));
+
+do {
+    var utenteStudenteCognome = prompt("Aggiungi il cognome dello studente:");
+} while (!isNaN(utenteStudenteCognome));
+
+do {
+    var utenteStudenteEta = parseInt(prompt("Aggiungi l'eta' dello studente:"));
+} while (isNaN(utenteStudenteEta));
+
+var utenteStudente = {}
+
+utenteStudente.nome = utenteStudenteNome;
+utenteStudente.cognome = utenteStudenteCognome;
+utenteStudente.eta = utenteStudenteEta;
 
 classe.push(utenteStudente);
 console.log(classe);
-
 
