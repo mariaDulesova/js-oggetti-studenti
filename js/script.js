@@ -63,7 +63,7 @@ var nomeCognome =[]
 for (var i = 0; i < classe.length; i++) {
     var nomeCognomeStudente = classe[i].nome + " " + classe[i].cognome;
     nomeCognome.push(nomeCognomeStudente);
-    document.getElementById("classe").innerHTML += "<li>" +nomeCognome[i] + "</li>";
+    document.getElementById("classe").innerHTML += "<li>" +nomeCognomeStudente + "</li>";
 }
 console.log(nomeCognome);
 
